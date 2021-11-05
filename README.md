@@ -55,6 +55,10 @@ Add Architecture Diagram here
 # How to use
 1. Home page
 
+![Page1](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page1.JPG)
 
+2. Page 2
+![Page2](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page2.JPG)
 
-2.
+3. Page 3
+![Page3] (https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-Eagleview.JPG)
