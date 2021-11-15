@@ -58,11 +58,50 @@ Add Architecture Diagram here
 ![Page1](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page1.JPG)
 
 
-2. Page 2
+2. Allows user to select between Google Streetview feature or Eagleview which allows user to upload new images and run it across AWS Rekognition
 
 ![Page2](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page2.JPG)
 
 
-3. Page 3
+3. After Eagleview is select, the user has to specify the S3 upload links for images and a xml which contains metadata 
 
 ![Page3](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-Eagleview.JPG)
+
+4. Once the images and xml file have been uploaded the images will be processed.
+If the links are not valid or if there is any issues
+
+![Page3-fail](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-fail.JPG)
+
+If the links are valid and all the process are successfull the download button will appear
+
+![Page3-pass](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-pass.JPG)
+
+5. There are three options to view the data, either by using the Google Street View overlay, .shp files that can be used with ArcGIS or .kml file
+
+![Page4](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page4.JPG)
+
+The data in Google Street View:
+
+
+The .shp file will be redirected to S3 bucket where the user can download all the .shp files
+
+# Credits
+
+"CurbPHX" is an open source software. The following people have contributed to this project.
+
+**Developers:**  
+[Soham Sahara](https://www.linkedin.com/in/sohamsahare11/)
+[Krishna Teja Kalaparty](https://www.linkedin.com/in/krishna-teja-kalaparty-a073b5195/)
+[Yug Gulati](https://www.linkedin.com/in/yug-gulati/)
+
+**UI Designer:** 
+[Nilo Exar](https://www.linkedin.com/in/nilo-exar-16a27b146/)
+[Sarah Vue](https://www.linkedin.com/in/sarahvue/)
+
+**Sr. Program Manager, AWS:**  [Jubleen Vilku](https://www.linkedin.com/in/jubleen-vilku/)
+
+**Digital Innovation Lead, AWS:** [Jason Whittet](https://www.linkedin.com/in/jasonwhittet/)
+
+**General Manager, ASU:** [Ryan Hendrix](https://www.linkedin.com/in/ryanahendrix/)
+
+This project is designed and developed with guidance and support from the [ASU Cloud Innovation Center](https://smartchallenges.asu.edu/) and the [City of Phoenix, Arizona]() teams. 
