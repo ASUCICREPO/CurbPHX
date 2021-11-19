@@ -1,0 +1,1 @@
+## After importing the shapefile processed through the cloud application, import symbology from either of these layer files.
