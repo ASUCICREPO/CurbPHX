@@ -187,7 +187,7 @@ def lambda_handler(lambda_event, context):
                     "width": str(img.width),
                     "height": str(img.height),
                 }
-                # upload_file(path, upload_bucket, split_filename, metadata)
+                upload_file(path, upload_bucket, split_filename, metadata)
                 # close the PIL image
                 img.close()
                 # delete the downloaded images
