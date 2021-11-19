@@ -1,0 +1,1 @@
+## Add an API gateway 'get-eagle-view-status-api' and add this lambda as trigger to the GET call

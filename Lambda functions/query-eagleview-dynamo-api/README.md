@@ -1,0 +1,1 @@
+## Add an API gateway 'GetCoordDataEagleView' and add this lambda as trigger to the GET call
