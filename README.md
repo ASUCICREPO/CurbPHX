@@ -83,14 +83,14 @@ If the links are valid and all the process are successfull the download button w
 The data in Google Street View:
 
 
-The .shp file will be redirected to S3 bucket where the user can download all the .shp files
+The user can download the files by clicking on the respective download buttons
 
 # Credits
 
 "CurbPHX" is an open source software. The following people have contributed to this project.
 
 **Developers:**  
-[Soham Sahara](https://www.linkedin.com/in/sohamsahare11/)
+[Soham Sahare](https://www.linkedin.com/in/sohamsahare11/)
 [Krishna Teja Kalaparty](https://www.linkedin.com/in/krishna-teja-kalaparty-a073b5195/)
 [Yug Gulati](https://www.linkedin.com/in/yug-gulati/)
 
