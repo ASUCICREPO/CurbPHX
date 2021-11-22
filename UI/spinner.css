@@ -1,0 +1,271 @@
+.spinner {
+    display: none;
+    position: absolute;
+    top: 0%;
+    background-color: rgba(136, 136, 136, 0.568);
+    width: 100%;
+    height: 100%;
+}
+
+.cssload-loader {
+    height: 135px;
+    width: 138px;
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 68px);
+    animation: cssload-loader 5.75s cubic-bezier(.8, 0, .2, 1) infinite;
+    -o-animation: cssload-loader 5.75s cubic-bezier(.8, 0, .2, 1) infinite;
+    -ms-animation: cssload-loader 5.75s cubic-bezier(.8, 0, .2, 1) infinite;
+    -webkit-animation: cssload-loader 5.75s cubic-bezier(.8, 0, .2, 1) infinite;
+    -moz-animation: cssload-loader 5.75s cubic-bezier(.8, 0, .2, 1) infinite;
+}
+
+.cssload-top {
+    animation: cssload-top 5.75s linear infinite;
+    -o-animation: cssload-top 5.75s linear infinite;
+    -ms-animation: cssload-top 5.75s linear infinite;
+    -webkit-animation: cssload-top 5.75s linear infinite;
+    -moz-animation: cssload-top 5.75s linear infinite;
+    border-top: 68px solid rgb(0, 0, 0);
+    border-right: 68px solid transparent;
+    border-left: 68px solid transparent;
+    height: 0px;
+    width: 3px;
+    transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+}
+
+.cssload-bottom {
+    animation: cssload-bottom 5.75s linear infinite;
+    -o-animation: cssload-bottom 5.75s linear infinite;
+    -ms-animation: cssload-bottom 5.75s linear infinite;
+    -webkit-animation: cssload-bottom 5.75s linear infinite;
+    -moz-animation: cssload-bottom 5.75s linear infinite;
+    border-right: 68px solid transparent;
+    border-bottom: 68px solid rgb(0, 0, 0);
+    border-left: 68px solid transparent;
+    height: 0px;
+    width: 3px;
+    transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+}
+
+.cssload-line {
+    animation: cssload-line 5.75s linear infinite;
+    -o-animation: cssload-line 5.75s linear infinite;
+    -ms-animation: cssload-line 5.75s linear infinite;
+    -webkit-animation: cssload-line 5.75s linear infinite;
+    -moz-animation: cssload-line 5.75s linear infinite;
+    border-left: 3px dotted rgb(0, 0, 0);
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 68px;
+    left: 68px;
+}
+
+@keyframes cssload-loader {
+    90% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@-o-keyframes cssload-loader {
+    90% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(180deg);
+    }
+}
+
+@-ms-keyframes cssload-loader {
+    90% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes cssload-loader {
+    90% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+@-moz-keyframes cssload-loader {
+    90% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(180deg);
+    }
+}
+
+@keyframes cssload-top {
+    90% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@-o-keyframes cssload-top {
+    90% {
+        -o-transform: scale(0);
+    }
+    100% {
+        -o-transform: scale(0);
+    }
+}
+
+@-ms-keyframes cssload-top {
+    90% {
+        -ms-transform: scale(0);
+    }
+    100% {
+        -ms-transform: scale(0);
+    }
+}
+
+@-webkit-keyframes cssload-top {
+    90% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(0);
+    }
+}
+
+@-moz-keyframes cssload-top {
+    90% {
+        -moz-transform: scale(0);
+    }
+    100% {
+        -moz-transform: scale(0);
+    }
+}
+
+@keyframes cssload-bottom {
+    10% {
+        transform: scale(0);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes cssload-bottom {
+    10% {
+        -o-transform: scale(0);
+    }
+    90% {
+        -o-transform: scale(1);
+    }
+    100% {
+        -o-transform: scale(1);
+    }
+}
+
+@-ms-keyframes cssload-bottom {
+    10% {
+        -ms-transform: scale(0);
+    }
+    90% {
+        -ms-transform: scale(1);
+    }
+    100% {
+        -ms-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes cssload-bottom {
+    10% {
+        -webkit-transform: scale(0);
+    }
+    90% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes cssload-bottom {
+    10% {
+        -moz-transform: scale(0);
+    }
+    90% {
+        -moz-transform: scale(1);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes cssload-line {
+    10% {
+        height: 68px;
+    }
+    100% {
+        height: 68px;
+    }
+}
+
+@-o-keyframes cssload-line {
+    10% {
+        height: 68px;
+    }
+    100% {
+        height: 68px;
+    }
+}
+
+@-ms-keyframes cssload-line {
+    10% {
+        height: 68px;
+    }
+    100% {
+        height: 68px;
+    }
+}
+
+@-webkit-keyframes cssload-line {
+    10% {
+        height: 68px;
+    }
+    100% {
+        height: 68px;
+    }
+}
+
+@-moz-keyframes cssload-line {
+    10% {
+        height: 68px;
+    }
+    100% {
+        height: 68px;
+    }
+}
