@@ -157,12 +157,12 @@ def parse_xml_get_data(photo_dict, _from=4978, _to=4326):
         data = {
             "id": elem.find("Id").text,
             "image_path": elem.find("ImagePath").text,
-            "mask_path": elem.find("MaskPath").text,
-            "frame_number": elem.find("FrameNumber").text,
+            # "mask_path": elem.find("MaskPath").text,
+            # "frame_number": elem.find("FrameNumber").text,
             "projected_corners": projected_corners,
             "lat_lon_corners": lat_lon_corners,
-            "ground_x": elem.find("GroundX").text,
-            "ground_y": elem.find("GroundY").text,
+            # "ground_x": elem.find("GroundX").text,
+            # "ground_y": elem.find("GroundY").text,
             "lat_lon_center": lat_lon_center,
             "pose": elem.find("Pose"),
             "filename": filename,
@@ -187,8 +187,6 @@ def create_geodataframe(photo_data_dict):
         element = photo_data_dict[key]
         datapoints["id"].append(element["id"])
         datapoints["filename"].append(element["filename"])
-        # logger.info(element['lat_lon_center'][:2][::-1])
-        # logger.info(element['lat_lon_center'][:2])
         datapoints["corner_1"].append(Point(element["lat_lon_corners"][0]))
         datapoints["corner_2"].append(Point(element["lat_lon_corners"][1]))
         datapoints["corner_3"].append(Point(element["lat_lon_corners"][2]))

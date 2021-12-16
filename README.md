@@ -29,26 +29,47 @@ An initial data set composed of images of sidewalk and curbs will be constructed
 
 Add Architecture Diagram here
 
-
 ## Functionality 
 
 
 
 ## Technologies
+Using Python as our base language, we used the following technology stack to implement our system.
 
-
+1. Amazon Web Services ->
+    - Lambda functions and layers
+    - DynamoDB
+    - Amazon Rekognition
+    - Simple Storage Service
+    - Simple Notification Service
+    - Virtual Private Cloud
+    - Elastic Compute Cloud
+2. GIS ->
+    - GeoPandas and Shapely for Python
+    - ArcGIS/ ArcGIS Pro
+3. Exploratory Data Analysis using Python Notebooks
 
 
 ## Assumptions
-
-
+Except that fact that this system was designed, built and tested on Amazon Web Services, following are the requirements,
+1. User should have access to at least 500 images with 250 images per label to train an AWS Rekognition model, these images can be obtained from Google Streetview or Aerial imagery providers (Eagleview, NearMap, etc.)  
+2. Images are uploaded on to a public S3 bucket
+3. A metadata file, in XML format needs to be included, if your Image provider was Eagleview, they will provide you this out of the box but if you're using a different provider, you might want to generate your own version.
+4. Image metadata XML tree should have the following structure:
+root -> "Block" -> "Photo" (one for each image included in the bucket) -> "Id", "ImagePath" (it is the filename), "ProjectedCorners" (latitude and longitude coordinates in ECEF system )(EPSG:4978), "Pose" (Rotation metrics, not mandatory).
 
 
 
 ## Future Enhancements
+1. Make the system scalable, more efficient and cost friendly
+2. Implement Image segmentation instead of bounding boxes for better edge detection 
+3. Improve the dashboard to incorporate more control over the backend
+4. Ability to pause/resume an image detection session
 
-
-
+## Limitations
+1. The crux of our system is AWS Lambda, which is designed for short-term jobs and hence there is a limit of 15 minutes. To work around this, we only upload one image everytime the process is run, which then splits it up into 9 smaller parts which are then consumed by the image recognition service. 
+2. Moving to an Auto-scalable infrastructure will increase performance and reduce costs
+3. Drawing the sidewalks detected on the image to a map accurately and smoothly is a challenge, keeping in mind to remove the false positives, an expertisee in GIS can solve this problem
 
 
 
