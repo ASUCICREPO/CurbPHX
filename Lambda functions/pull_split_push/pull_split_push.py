@@ -126,7 +126,10 @@ def lambda_handler(lambda_event, context):
     # + 'tiles/'
     prefix = event["image_prefix"]
 
+    
+   
     filenames = filtered.filename.values
+    
 
     # TODO: read this from environment variables?
     split = 9

@@ -74,8 +74,16 @@ def lambda_handler(lambda_event, context):
     # covnert from ECEF to WGS84
     photo_data_dict = parse_xml_get_data(photo_dict, 4978, 4326)
     logger.info("photo_data_dict created after parsing {}".format(len(photo_data_dict)))
+    
+    # logger.info(photo_data_dict)
 
     gdf, poly_gdf = create_geodataframe(photo_data_dict)
+    
+    logger.info("gdf")
+    logger.info(gdf.head())
+    logger.info("poly gdf ")
+    logger.info(poly_gdf.head())
+    
     logger.info("geodataframe created {}".format(len(poly_gdf)))
 
     today = datetime.today()
@@ -106,7 +114,8 @@ def lambda_handler(lambda_event, context):
     # adding bounds to the poly_gdf
     bdf = poly_gdf.bounds
     data = pd.concat([poly_gdf, bdf], axis=1)
-
+    logger.info('data below')
+    logger.info(data.head())
     # getting the bounds for all the image sets provided
     minmax_bbox = (data.minx.min(), data.miny.min(), data.maxx.max(), data.maxy.max())
     mean_bbox = (data.minx.mean(), data.miny.mean(), data.maxx.mean(), data.maxy.mean())
@@ -125,10 +134,12 @@ def lambda_handler(lambda_event, context):
 
     # Creating a Dataframe of filtered image bounds w.r.t the cells
     strtree, fdf = create_index_filter_image_bounds(data, cells)
-
+    logger.info('fdf '+str(len(fdf)))
+    logger.info(fdf.head())
     logger.info("images filtered using strtree index")
     poly_map = {}
     for index, row in data.iterrows():
+        logger.info("data " + row["geometry"].wkt)
         poly_map[row["geometry"].wkt] = row
 
     f_data = gpd.GeoDataFrame()
@@ -143,7 +154,7 @@ def lambda_handler(lambda_event, context):
             logger.info(row.geometry)
         f_data = pd.concat([f_data, match], axis=1)
     f_data = f_data.transpose()
-    # f_data.head()
+    logger.info(f_data.head())
     logger.info("length of filtered dataframe {}".format(len(f_data)))
 
     export = f_data[["geometry", "filename"]]
