@@ -27,10 +27,14 @@ An initial data set composed of images of sidewalk and curbs will be constructed
 
 ## Architecture Diagram
 
-Add Architecture Diagram here
+High-level overview of the application
+![Process Flow Chart](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/process_flow.png)
+
+Detailed Architectural diagram
+![Architectural diagram](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/architectural_diagram.png)
 
 ## Functionality 
-
+Given a set of aerial imagery, a image recognition model is trained using a subset of high quality feature rich images to detect types of sidewalks viz. attached, detached and no sidewalk regions. We generate an inventory for sidewalks for the given city by filtering, parsing and extracting features out of the imageset using Amazon Web Services. The final output is rendered on google maps overlay and as a shapefile to use on ArcGIS pro.  
 
 
 ## Technologies
