@@ -99,7 +99,7 @@ If the links are not valid or if there is any issues
 
 If the links are valid and all the process are successfull the download button will appear
 
-![Page3-pass](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-pass.JPG)
+![Page3-pass](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-pass.png)
 
 5. There are three options to view the data, either by using the Google Street View overlay, .shp files that can be used with ArcGIS or .kml file
 
