@@ -5,6 +5,7 @@ CurbPHX
 | [Overview](#overview)         |     See the motivation behind this project.    | 
 | [Description](#description)         |     Learn more about the problem, implemented solution and challenges faced.    | 
 | [Deployment Guide](#deployment-guide)         |    How to install CurbPHX architecture. |
+| [AWS Rekognition](#aws-rekognition)         |    How to use AWS Rekognition. |
 | [How to Use](#how-to-use)       |     Instructions to use CurbPHX.   |
 | [Credits](#credits)      |     Meet the team behind this.     |
 | [License](#license)      |     License details.     |
@@ -76,12 +77,10 @@ root -> "Block" -> "Photo" (one for each image included in the bucket) -> "Id", 
 3. Drawing the sidewalks detected on the image to a map accurately and smoothly is a challenge, keeping in mind to remove the false positives, an expertisee in GIS can solve this problem
 
 
+# AWS Rekognition
+Check this [doc](./docs/rekognition.md) for instructions on how to use Rekognition for training and evaluation of the model.
 
 # How to use
-
-## AWS Rekognition - Image Recognition model
-Check this ![doc](./docs/rekognition.md)
-
 
 1. Home page
 
