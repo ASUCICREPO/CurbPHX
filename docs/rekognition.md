@@ -2,12 +2,13 @@
 
 ## Training the model
 
+#### [All Rekognition Tutorials](https://console.aws.amazon.com/rekognition/custom-labels#/get-started/tutorials)
+
 ### Uploading the training set
-![Rekognition-Tutorials](https://console.aws.amazon.com/rekognition/custom-labels#/get-started/tutorials)
 
 - Type **Rekognition** on the AWS console search bar and select the service. click on **Use Custom Labels** on the top left part of the window and then **Get Started** (make sure to check the region on your top right, the service is not available in many regions. For now, we recommend **N. Virgina**)
 ![Dashboard](../images/rekognition/Inkeddashboard.jpg)
-- Create a new Project following this ![tutorial](https://www.youtube.com/watch?v=Mse5Jgh9n3M&t=2s).  To summarize the video, do the following ->
+- Create a new Project following this [tutorial](https://www.youtube.com/watch?v=Mse5Jgh9n3M&t=2s).  To summarize the video, do the following ->
     - Create a new **Dataset** and import images using S3 bucket. Alternatively, you can also upload them directly but it only allows 30 images at a time, so it can be a time consuming task.
     - **Turn off Automatic Labelling** as we will have to label the sidewalk data manually
 - Next, we need to label the images. For every attached, detached or no sidewalk identified in the dataset, we need to draw bounding boxes around each instance with the appropriate labels as demonstrated below.
@@ -20,7 +21,7 @@
     - Next, we assign labels to each image. We can select up to 9 images at once for labelling, once selected, click on **Draw bounding boxes** and follow the steps shown below.
     ![drawing-bounding-boxes](../images/rekognition/boxes.gif)
     - Add atleast **250 images per label** for a decent model, but we recommend going for **500 images per label** for maximum precision in detection of labels.
-- Once labels have been assigned to each image, we need to train the model. This will take anything from 30 minutes to 24 hours. Do keep in mind that the time it takes to train will be chargeable. ![rekognition-pricing](https://aws.amazon.com/rekognition/pricing/)
+- Once labels have been assigned to each image, we need to train the model. This will take anything from 30 minutes to 24 hours. Do keep in mind that the time it takes to train will be chargeable. [Rekognition-pricing](https://aws.amazon.com/rekognition/pricing/)
     - Go to your project and click on **Train Model**. Verify the configuration, nothing needs to be changed here, you may add tags to track your pricing/cost model. Click on **Train Model** again and you will be greeted by yet another dialog prompt which reminds you that the training is chargeable. Click **Train Model** once again to start training.
     ![train-model](../images/rekognition/training.png)
     ![train-confirm](../images/rekognition/train-confirm.png)
