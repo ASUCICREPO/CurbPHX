@@ -28,10 +28,10 @@ An initial data set composed of images of sidewalk and curbs will be constructed
 ## Architecture Diagram
 
 High-level overview of the application
-![Process Flow Chart](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/process_flow.png)
+![Process Flow Chart](./images/process_flow.png)
 
 Detailed Architectural diagram
-![Architectural diagram](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/architectural_diagram.png)
+![Architectural diagram](./images/architectural_diagram.png)
 
 ## Functionality 
 Given a set of aerial imagery, a image recognition model is trained using a subset of high quality feature rich images to detect types of sidewalks viz. attached, detached and no sidewalk regions. We generate an inventory for sidewalks for the given city by filtering, parsing and extracting features out of the imageset using Amazon Web Services. The final output is rendered on google maps overlay and as a shapefile to use on ArcGIS pro.  
@@ -78,32 +78,37 @@ root -> "Block" -> "Photo" (one for each image included in the bucket) -> "Id", 
 
 
 # How to use
+
+## AWS Rekognition - Image Recognition model
+Check this ![doc](./docs/rekognition.md)
+
+
 1. Home page
 
-![Page1](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page1.JPG)
+![Page1](./images/page1.JPG)
 
 
 2. Allows user to select between Google Streetview feature or Eagleview which allows user to upload new images and run it across AWS Rekognition
 
-![Page2](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page2.JPG)
+![Page2](./images/page2.JPG)
 
 
 3. After Eagleview is select, the user has to specify the S3 upload links for images and a xml which contains metadata 
 
-![Page3](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-Eagleview.JPG)
+![Page3](./images/page3-Eagleview.JPG)
 
 4. Once the images and xml file have been uploaded the images will be processed.
 If the links are not valid or if there is any issues
 
-![Page3-fail](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-fail.JPG)
+![Page3-fail](./images/page3-fail.JPG)
 
 If the links are valid and all the process are successfull the download button will appear
 
-![Page3-pass](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page3-pass.png)
+![Page3-pass](./images/page3-pass.png)
 
 5. There are three options to view the data, either by using the Google Street View overlay, .shp files that can be used with ArcGIS or .kml file
 
-![Page4](https://github.com/ASUCICREPO/CurbPHX/blob/main/images/page4.JPG)
+![Page4](./images/page4.JPG)
 
 The data in Google Street View:
 
