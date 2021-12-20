@@ -6,8 +6,8 @@
 
 ### Uploading the dataset
 
-- Type **Rekognition** on the AWS console search bar and select the service. click on **Use Custom Labels** on the top left part of the window and then **Get Started** (make sure to check the region on your top right, the service is not available in many regions. For now, we recommend **N. Virgina**)
-![Dashboard](../images/rekognition/dashboard.png)
+- Type **Rekognition** on the AWS console search bar and select the service. click on **Use Custom Labels** on the top left part of the window and then click on **Get Started** button (make sure to check the region on your top right, the service is not available in many regions. For now, we recommend **North Virgina (us-east-1)**)
+![Rekognition Dashboard](../images/rekognition/get-started.gif)
 - Create a new Project following this [tutorial](https://www.youtube.com/watch?v=Mse5Jgh9n3M&t=2s).  To summarize the video, do the following ->
     - Create a new **Dataset** and import images using S3 bucket. Alternatively, you can also upload them directly but it only allows 30 images at a time, so it can be a time consuming task.
     - **Turn off Automatic Labelling** as we will have to label the sidewalk data manually
