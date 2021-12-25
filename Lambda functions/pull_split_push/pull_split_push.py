@@ -16,6 +16,10 @@ from botocore.exceptions import ClientError
 import logging
 import json
 
+import os
+
+image_status_bucket = os.environ['ImageStatus']
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 logger.info("Function imports loaded")
@@ -23,7 +27,7 @@ logger.info("Function imports loaded")
 s3_cli = boto3.client("s3")
 s3_res = boto3.resource("s3")
 sns_cli = boto3.client("sns")
-table = boto3.resource("dynamodb").Table("ImageStatus")
+table = boto3.resource("dynamodb").Table(image_status_bucket)
 
 
 def upload_file(file_name, bucket, object_name=None, metadata={}):
@@ -57,7 +61,7 @@ def lambda_handler(lambda_event, context):
     records = lambda_event["Records"][0]
     sns = records["Sns"]
     event = json.loads(sns["Message"])
-
+    print(image_status_bucket)
     job_id = event["job_id"]
     filtered_path = event["filtered_path"]
     data_path = event["data_path"]

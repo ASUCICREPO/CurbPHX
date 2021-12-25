@@ -96,7 +96,7 @@ def lambda_handler(lambda_event, context):
     filepath = os.path.join(path_prefix, shapefile + shp_suffix)
     poly_gdf.to_file(filepath)
 
-    export_bucket = "export-data-phx-cic"
+    export_bucket = os.environ['ExportBucket']
 
     shapefile_prefix = "shapefiles/"
     # upload to s3
@@ -173,6 +173,8 @@ def lambda_handler(lambda_event, context):
             # shapefile_prefix + timestamp + filtered_shapefilename,
         )
 
+    unprocessed_bucket = os.environ['UnprocessedBucket']
+
     output = {
         "data_path": os.path.join(shapefile_prefix, timestamp, shapefile),
         "filtered_path": os.path.join(
@@ -181,7 +183,7 @@ def lambda_handler(lambda_event, context):
         "shapefile_bucket": export_bucket,
         "images_bucket": images_bucket,
         # TODO: Read these from DynamoDB
-        "upload_bucket": "eagleview-unprocessed-images",
+        "upload_bucket": unprocessed_bucket,
         #   "image_prefix": "image_sets/frames/images/"
         "image_prefix": images_path,
         "job_id": job_id,

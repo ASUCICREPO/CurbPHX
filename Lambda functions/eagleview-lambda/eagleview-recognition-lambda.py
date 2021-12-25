@@ -268,7 +268,8 @@ def get_labels_and_imgdata(bucket, key):
             imgHeight,
         )
         
-    move_object_between_buckets('eagleview-processed-images', bucket, key)
+    processed_bucket = os.environ['ProcessedBucket']
+    move_object_between_buckets(processed_bucket, bucket, key)
 
 
 
@@ -297,7 +298,8 @@ def lambda_handler(lambda_event, context):
     
     num=0
     update = split // 2
-    bucket = 'eagleview-unprocessed-images'
+    bucket = os.environ['UnprocessedBucket']
+    # bucket = 'eagleview-unprocessed-images'
     st_time = time.time()
     content = s3.list_objects(Bucket=bucket)['Contents']
     for key in content:
