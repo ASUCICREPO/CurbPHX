@@ -2,4 +2,5 @@
 
 ## Add SNS 'trigger-ev-process' lambda subscription to this lambda 
 
-## Add environment variable => 'UnprocessedBucket' -> 'eagleview-unprocessed-images' or the name of the bucket created for storing unprocessed images
+## Add environment variable => 
+1.  'UnprocessedBucket' -> 'eagleview-unprocessed-images' or the name of the bucket created for storing unprocessed images
