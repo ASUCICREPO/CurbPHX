@@ -4,7 +4,7 @@ CurbPHX
 |:----------------|:-----------|
 | [Overview](#overview)         |     See the motivation behind this project.    | 
 | [Description](#description)         |     Learn more about the problem, implemented solution and challenges faced.    | 
-| [Deployment Guide](#deployment-guide)         |    How to install CurbPHX architecture. |
+| [Deployment Guide](./docs/deployment.md)         |    How to install CurbPHX architecture. |
 | [AWS Rekognition](#aws-rekognition)         |    How to use AWS Rekognition. |
 | [How to Use](#how-to-use)       |     Instructions to use CurbPHX.   |
 | [Credits](#credits)      |     Meet the team behind this.     |
