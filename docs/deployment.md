@@ -2,7 +2,6 @@
 
 ## Prerequisites
 - AWS Account
-- Approximately 2 - 3 hours
 
 ## Services
 We will leverage the power of the following services:
@@ -88,7 +87,7 @@ Add full access permissions to ->
 
 ![Video Tutorial](../images/deployment/iam_role.gif)
 
-We need to deply **one lambda function each** for corresponding directory inside the /'Lambda Functions'
+We need to deploy **one lambda function each** for corresponding directory inside the /'Lambda Functions'
 
 ![Video Tutorial](../images/deployment/lambda.gif)
 
