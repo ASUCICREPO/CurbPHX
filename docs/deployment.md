@@ -112,4 +112,4 @@ Create the following API Gateway configurations ->
 4. Click on 'Integration' -> Lambda and select the corresponding lambda function
 
 ### Rekognition
-Follow the other readme document in this folder for Amazon Rekogntion.
+Follow the other [readme document](./rekognition.md) in this folder for Amazon Rekogntion.
