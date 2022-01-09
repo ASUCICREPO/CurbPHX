@@ -76,7 +76,7 @@ Refer to following documents for each deployment steps:
 2. [AWS Lambda Deployment Guide](./Lambda%20functions/README.md)
 
 ## Future Enhancements
-1. Make the system scalable, more efficient and cost friendly. Right now, the bottleneck of the application is [AWS Lambda](https://aws.amazon.com/lambda/), as it is designed to work for smaller processes. We need to use a service which can do time-consuming tasks faster and for less cost such as [AWS Batch](https://aws.amazon.com/batch/) or [AWS Fargate](https://aws.amazon.com/fargate/)
+1. Make the system scalable, more efficient and cost friendly. Right now, the bottleneck of the application is [AWS Lambda](https://aws.amazon.com/lambda/), as it is designed to work for smaller processes. We need to use a service which can do time-consuming tasks faster and for less cost such as [AWS Batch](https://aws.amazon.com/batch/), [AWS Simple Work Flows](https://aws.amazon.com/swf/) or [AWS Fargate](https://aws.amazon.com/fargate/)
 2. Implement [image segmentation](https://en.wikipedia.org/wiki/Image_segmentation) instead of bounding boxes for better edge detection
 3. Improve the dashboard to incorporate more control over the backend which provides the ability to pause/resume/abort the processing loop, display the database information, ability to move/delete items from the backend database, etc
 
