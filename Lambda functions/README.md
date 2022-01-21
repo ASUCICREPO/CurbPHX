@@ -1,4 +1,4 @@
-# Instructions to deploy Lambda functions
+# Instructions to deploy [Lambda functions](https://aws.amazon.com/lambda/)
 
 Each folder in this directory contains a separate Lambda function configuration. Each Lambda function can have the following configuration parameters
 1.  Lambda Layer 

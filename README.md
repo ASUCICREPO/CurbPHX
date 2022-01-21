@@ -13,13 +13,13 @@ CurbPHX
 
 
 # Overview
-The [City of Phoenix - Street Transportation Department](https://www.phoenix.gov/streets) and the [Arizona State University Smart City Cloud Innovation Center Power by AWS](https://smartchallenges.asu.edu/)(ASU CIC) are coming together to develop a tool that can build a complete sidewalk data inventory. A sidewalk inventory is a data bank with a collection of attributes about the sidewalk. In this project, we tackle the problem of identifying the different types of sidewalk which are attached sidewalks, detached sidewalks and places where there are no sidewalks. The City of Phoenix - Street Transportation department will use this data to better understand and improve pedestrian mobility and safety to improve sidewalk management.  
+The [City of Phoenix - Street Transportation Department](https://www.phoenix.gov/streets) and the [Arizona State University Smart City Cloud Innovation Center Power by AWS](https://smartchallenges.asu.edu/)(ASU CIC) are coming together to develop a tool that can build a complete sidewalk data inventory. A sidewalk inventory is a data bank with a collection of attributes about the sidewalk. In this project, we tackle the problem of identifying the different types of sidewalk which are attached sidewalks, detached sidewalks and places where there are no sidewalks. The City of Phoenix - Street Transportation department will use this data to better understand pedestrian mobility, safety and to improve sidewalk management.
 
 
 # Description
 
 ## Problem
-As one of the the fastest growing cities in the United States, Phoenix has a constant need to update its sidewalk inventory to include new developments. The City has the opportunity to expand the data sets used to understand the location and condition of sidewalks and curb ramps. Access to sidewalk data makes it possible to identify and prioritize funding for infrastructure investments. A sidewalk data layer supports the ability to measure the impact of projects on the City’s sidewalk and ramp network. A sidewalk layer also helps to identify areas of need and support the use of mobility resources.
+As one of the the fastest growing cities in the United States, Phoenix has a constant need to update its sidewalk inventory to include new developments. The City has the opportunity to expand the data sets used to understand the location and condition of sidewalks. Access to sidewalk data makes it possible to identify and prioritize funding for infrastructure investments. A sidewalk data layer would help identify areas of need, measure the impact of projects on City's sidewalk network and prioritize funding for infrastructure investments.
 
 ## Approach
 Working together, the City of Phoenix and the CIC envisioned a new solution: CurbPHX. CurbPHX is a comprehensive digital inventory of all sidewalks in the city. 
@@ -35,13 +35,13 @@ Detailed Architectural diagram
 ![Architectural diagram](./images/architectural_diagram.png)
 
 ## Functionality 
-Given a set of aerial imagery, which is uploaded through an [Amazon S3 bucket](https://aws.amazon.com/pm/serv-s3), a image recognition model is trained using a subset of high quality feature rich images to detect types of sidewalks viz. attached, detached and no sidewalk regions. 
+Given a set of aerial imagery, which is uploaded through an [Amazon S3 bucket](https://aws.amazon.com/pm/serv-s3), a image recognition model is trained using a subset of high quality feature rich images to detect types of sidewalks such as attached, detached and no sidewalk regions. 
 
 Every dataset contains the possibility of duplicate features, which must be removed in order to reduce processing costs, time complexity, and improve efficiency. As a result, our initial step after receiving the imageset is to remove any photographs that cover the same area of the city. This is accomplished by constructing a grid of equal-sized rectangles based on the dataset limits. For each cell, we choose an image that has the maximum overlap with it, allowing us to pick images that cover the entire city while having few duplication among them.
 
 Because an aerial photograph of a city area has a high resolution, it must be broken down into smaller parts so that it may be processed faster and more efficiently. We divided an image into 9 chunks before interpolating the spatial coordinates for all four corners of each piece. The algorithm consumes these chunks one at a time and uses them to generate a sidewalk inventory that includes detached, attached, and no sidewalk regions.
 
-In this way, We generate an inventory for sidewalks for the given city by filtering, parsing and extracting features out of the imageset using Amazon Web Services. The final output is rendered on google maps overlay and as a shapefile to use on ArcGIS pro.  
+In this way, we generate an inventory for sidewalks for the given city by filtering, parsing and extracting features out of the imageset using Amazon Web Services. The final output is rendered on google maps overlay and as a shapefile to use on ArcGIS pro.  
 
 ## Technologies
 Using Python as our base language, we used the following technology stack to implement our system.
