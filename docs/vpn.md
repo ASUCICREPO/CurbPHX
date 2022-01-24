@@ -6,6 +6,7 @@
     2.  start the process 
     3.  track the progress of the process 
     4.  access the google Map overlay
+    5.  access the private ec2 instances 
 -   The servers and website will be hosted in a private network so VPN will be required to access these URLs.
 
 ## How to Connect
