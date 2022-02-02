@@ -8,6 +8,7 @@ CurbPHX
 | [VPN Connection](#vpn)         |    Accessing through VPN. |
 | [AWS Rekognition](#aws-rekognition)         |    How to use AWS Rekognition. |
 | [How to Use](#how-to-use)       |     Instructions to use CurbPHX.   |
+| [Future Enhancements](#future-enhancements)       |     Limitations and next steps which can be taken.   |
 | [Credits](#credits)      |     Meet the team behind this.     |
 | [License](#license)      |     License details.     |
 
@@ -70,7 +71,7 @@ Except that fact that this system was designed, built and tested on Amazon Web S
 4. Image metadata XML tree should have the following structure:
 root -> "Block" -> "Photo" (one for each image included in the bucket) -> "Id", "ImagePath" (it is the filename), "ProjectedCorners" (latitude and longitude coordinates in ECEF system )(EPSG:4978), "Pose" (Rotation metrics, not mandatory).
 
-## Deployment
+# Deployment
 
 Refer to following documents for each deployment steps:
 1. [General Deployment guidelines](./docs/deployment.md)
@@ -116,13 +117,13 @@ The data in Google Street View:
 
 The user can download the files by clicking on the respective download buttons
 
-## Future Enhancements
+# Future Enhancements
 1. Make the system scalable, more efficient and cost friendly. Right now, the bottleneck of the application is [AWS Lambda](https://aws.amazon.com/lambda/), as it is designed to work for smaller processes. We need to use a service which can do time-consuming tasks faster and for less cost such as [AWS Batch](https://aws.amazon.com/batch/), [AWS Simple Work Flows](https://aws.amazon.com/swf/) or [AWS Fargate](https://aws.amazon.com/fargate/)
 2. Implement [image segmentation](https://en.wikipedia.org/wiki/Image_segmentation) instead of bounding boxes for better edge detection
 3. Improve the dashboard to incorporate more control over the backend which provides the ability to pause/resume/abort the processing loop, display the database information, ability to move/delete items from the backend database, etc
 
 ## Limitations
-1. The crux of our system is AWS Lambda, which is designed for short-term jobs and hence there is a limit of 15 minutes. To work around this, we only upload one image everytime the process is run, which then splits it up into 9 smaller parts which are then consumed by the image recognition service
+1. The crux of our system is AWS Lambda, which is designed for short-term jobs and hence there is a limit of 15 minutes. To work around this, we upload up to 10 images everytime the process is run, which then splits up into 9 smaller parts per image which are then consumed by the image recognition service
 2. Moving to an Auto-scalable infrastructure will increase performance and reduce time complexity of the application
 3. Drawing the sidewalks detected on the image to a map accurately and smoothly is a challenge, keeping in mind to remove the false positives, an expertise in GIS can solve this problem
 
