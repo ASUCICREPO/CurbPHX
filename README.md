@@ -41,7 +41,17 @@ Given a set of aerial imagery, which is uploaded through an [Amazon S3 bucket](h
 
 Every dataset contains the possibility of duplicate features, which must be removed in order to reduce processing costs, time complexity, and improve efficiency. As a result, our initial step after receiving the imageset is to remove any photographs that cover the same area of the city. This is accomplished by constructing a grid of equal-sized rectangles based on the dataset limits. For each cell, we choose an image that has the maximum overlap with it, allowing us to pick images that cover the entire city while having few duplication among them.
 
+### Image bounding box plotted on to the grid
+![Images on the grid Grid](./images/functionality/images-on-grid.png)
+
+### Images after filtering
+![Images after filtering](./images/functionality/filtered-images.png)
+
 Because an aerial photograph of a city area has a high resolution, it must be broken down into smaller parts so that it may be processed faster and more efficiently. We divided an image into 9 chunks before interpolating the spatial coordinates for all four corners of each piece. The algorithm consumes these chunks one at a time and uses them to generate a sidewalk inventory that includes detached, attached, and no sidewalk regions.
+
+
+### Splitting an image into segments
+![Image split](./images/functionality/split-image.png)
 
 In this way, we generate an inventory for sidewalks for the given city by filtering, parsing and extracting features out of the imageset using Amazon Web Services. The final output is rendered on google maps overlay and as a shapefile to use on ArcGIS pro.  
 
