@@ -160,4 +160,4 @@ This project is designed and developed with guidance and support from the [ASU C
 
 # License
 
-This project is distributed under the [Apache License, Version 2.0](/LICENSE.md);
+This project is distributed under the [Apache License, Version 2.0](/LICENSE.md).
