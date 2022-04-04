@@ -157,3 +157,7 @@ The user can download the files by clicking on the respective download buttons
 **General Manager, ASU:** [Ryan Hendrix](https://www.linkedin.com/in/ryanahendrix/)
 
 This project is designed and developed with guidance and support from the [ASU Cloud Innovation Center](https://smartchallenges.asu.edu/) and the [City of Phoenix, Arizona](https://www.phoenix.gov/streets/) teams. 
+
+# License
+
+This project is distributed under the [Apache License, Version 2.0](/LICENSE.md);
