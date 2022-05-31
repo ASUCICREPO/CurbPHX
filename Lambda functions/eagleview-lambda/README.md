@@ -7,3 +7,5 @@
 ## Add environment variable => 
 1. 'UnprocessedBucket' -> 'eagleview-unprocessed-images' or the name of the bucket created for storing unprocessed images
 2. 'ProcessedBucket' -> 'eagleview-processed-images' or the name of the bucket created for storing processed images
+
+## Add DynamoDB and S3 full access to the execution role of the lambda function 
