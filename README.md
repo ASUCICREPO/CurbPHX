@@ -1,4 +1,4 @@
-CurbPHX
+Gunshot Detection (README Work in Progress)
 
 |Index| Description|
 |:----------------|:-----------|
