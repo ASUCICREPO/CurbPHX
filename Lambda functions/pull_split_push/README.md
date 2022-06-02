@@ -4,4 +4,4 @@
 ## Add environment variable -> 
 1.  'ImageStatus' -> 'ImageStatus' / or the name of the dynamodb table created to track progress of images.
 
-## Add DynamoDB and S3 full access to the execution role of the lambda function 
+## Add DynamoDB, SNS and S3 full access to the execution role of the lambda function 
